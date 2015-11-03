@@ -1,0 +1,35 @@
+include ../blocks/aside/aside-menu
+include ../blocks/wrapper/wrapper
+include ../blocks/main-slider/main-slider
+include ../blocks/title/title
+include ../blocks/news/news
+include ../blocks/content/content
+include ../blocks/post-preview/post-preview
+extends ../blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Курский совет депутатов';
+
+block content
+	-dataMenu = getData('aside-menu')
+
+	+wrapper()
+		+main-slider()
+		+wrapper()
+			+aside-menu(dataMenu)
+			+content()
+				+title()
+					| Спасите наши реки, господа!
+					+b.post
+						+e('img').img(src='assets/images/post/post3-1.jpg' width='380px')
+						+e('p').text
+							| На фото показано, как сильно меняется река, протекая через наш город.И особенно сильно
+							| после впадения р.Кур в р.Тускарь возле цирка. Город практически загаживает мусором и
+							| песком, раньше, если показать фотографии до революционные 1917г., то в этом месте
+							| ходили катера, а сейчас там воробью будет по колено.
+						+e('img').img(src='assets/images/post/post3-2.jpg' width='460px')
+
+						+e('p').text
+							| Необходимо построить обыкновенный мусороприёмник,  который будет улавливать
+							| бытовой мусор и песок, иначе лет через 5 - 10 река превратится в грязную канаву.
+						+e('img').img(src='assets/images/post/post3-2.jpg' width='460px')

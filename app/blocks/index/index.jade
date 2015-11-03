@@ -1,0 +1,34 @@
+include ../content/content
+include ../container/container
+include ../subtitle/subtitle
+include ../heading/heading
+include ../list/list
+include ../col/col
+include ../aside/aside-menu
+include ../wrapper/wrapper
+include ../main-slider/main-slider
+include ../title/title
+include ../news/news
+include ../post-preview/post-preview
+
+mixin index(data)
+	-data = data || ''
+	-dataMenu = getData('aside-menu')
+	-post1 = getData('post-preview')
+	-post2 = getData('post-preview2')
+	-post3 = getData('post-preview3')
+
+	+wrapper()
+		+main-slider()
+		+wrapper()
+			+aside-menu(dataMenu)
+			+content()
+				if (data === 'news')
+					+title()
+						| Новости и события
+					+news()
+				+title()
+					| Статьи и письма
+				+post-preview(post1)
+				+post-preview(post2)
+				+post-preview(post3)

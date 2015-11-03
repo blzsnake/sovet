@@ -1,0 +1,26 @@
+[
+	{
+		"title":"Главная",
+		"link":"/index.html"
+	},
+	{
+		"title":"Отчеты заседаний",
+		 "link":"/test"
+	},
+	{
+		"title":"История образования",
+		"link":"/history.html"}
+	,
+	{
+		"title":"Актуальные вопросы",
+		"link":"/plan.html"
+	},
+	{
+		"title":"Обратная связь",
+		"link":"/test"
+	},
+	{
+		"title":"Статьи и письма",
+		"link":"/posts.html"
+	}
+]

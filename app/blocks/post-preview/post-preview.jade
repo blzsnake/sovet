@@ -1,0 +1,6 @@
+mixin post-preview(data)
+	+b.post-preview
+		+e('h3').title= data.title
+		+e.text= data.text
+		+e.data= data.date
+		+e('a').more(href=data.link) Читать далее...

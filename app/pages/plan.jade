@@ -1,0 +1,26 @@
+include ../blocks/aside/aside-menu
+include ../blocks/wrapper/wrapper
+include ../blocks/main-slider/main-slider
+include ../blocks/title/title
+include ../blocks/news/news
+include ../blocks/content/content
+include ../blocks/actuals/actuals
+include ../blocks/post-preview/post-preview
+extends ../blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Курский совет депутатов';
+
+block content
+	-dataMenu = getData('aside-menu')
+	-dataActuals = getData('actuals')
+
+	+wrapper()
+		+main-slider()
+		+wrapper()
+			+aside-menu(dataMenu)
+			+content()
+				+title()
+					| Разработки предложений по плану работы совета
+
+				+actuals(dataActuals)

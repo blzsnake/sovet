@@ -1,0 +1,7 @@
+mixin actuals (data)
+	+b('ul').actuals
+		each item in data
+			+e('li').item
+				+e.number= item.number
+				+e.text= item.title
+				+e.author= item.author

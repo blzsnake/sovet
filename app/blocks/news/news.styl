@@ -1,0 +1,78 @@
+.news
+	padding-top 10px
+	padding-left 16px
+
+	&__box
+		margin-bottom 20px
+		padding 2px
+		position relative
+		display inline-block
+		width 32%
+		height 340px
+
+		&:hover
+			border 1px solid #e1e1e1
+			box-shadow 1px 1px 2px 0 #e1e1e1
+
+		&.is-active
+			border 1px solid #e1e1e1
+			border-bottom none
+			z-index 10
+
+			&:hover
+				box-shadow none
+				border-bottom none
+
+	&__box-img
+		margin-top 10px
+		margin-bottom 10px
+		width 100%
+
+	&__box-title
+		max-width 150px
+		font-weight 600
+
+	&__box-info
+		font-size 14px
+
+	&__box-link
+		position absolute
+		bottom 5px
+		right 0
+		padding-left 4px
+		padding-right 4px
+		color #fff
+		text-decoration none
+		text-transform uppercase
+		background-color #7caaba
+		line-height 23px
+
+	&__content
+		position relative
+		margin-top -22px
+		padding-top 20px
+		padding-left 15px
+		padding-right 5px
+		height 0
+		overflow hidden
+		font-size 14px
+		z-index 1
+		transition height .3s ease
+
+		&.is-active
+			box-shadow 0px 1px 2px 1px #e1e1e1
+			border 1px solid #e1e1e1
+			height 100%
+
+	&__content-description
+		margin-bottom 10px
+		font-style italic
+
+	&__content-text
+		margin-bottom 10px
+		text-indent 20px
+
+	&__content-img
+		margin-top 30px
+		margin-right 10px
+		size 300px 200px
